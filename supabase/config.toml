@@ -1,0 +1,103 @@
+project_id = "irnfwewabogveofwemvg"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://127.0.0.1:54321"
+
+[auth]
+enabled = true
+port = 54324
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["https://localhost:3000"]
+jwt_expiry = 3600
+external_email_enabled = true
+external_phone_enabled = false
+external_sms_enabled = false
+
+[storage]
+enabled = true
+port = 54325
+file_size_limit = "50MiB"
+buckets = []
+
+[functions.secure-user-management]
+verify_jwt = false
+
+[functions.send-test-results-email]
+verify_jwt = false
+
+[functions.send-appointment-notification]
+verify_jwt = false
+
+[functions.create-iyzico-payment]
+verify_jwt = false
+
+[functions.send-verimor-sms]
+verify_jwt = false
+
+[functions.get-edge-ip]
+verify_jwt = false
+
+[functions.send-sms-via-proxy]
+verify_jwt = false
+
+[functions.send-sms-via-static-proxy]
+verify_jwt = false
+
+[functions.get-proxy-ip]
+verify_jwt = false
+
+[functions.iyzico-payment-callback]
+verify_jwt = false
+
+[functions.send-registration-email]
+verify_jwt = false
+
+[functions.send-order-status-email]
+verify_jwt = false
+
+[functions.birfatura-order-status]
+verify_jwt = false
+
+[functions.birfatura-payment-methods]
+verify_jwt = false
+
+[functions.birfatura-orders]
+verify_jwt = false
+
+[functions.birfatura-order-cargo-update]
+verify_jwt = false
+
+[functions.birfatura-invoice-link-update]
+verify_jwt = false
+
+[functions.create-birfatura-invoice]
+verify_jwt = false
+
+[functions.daily-order-generator]
+verify_jwt = false
+
+[functions.share-blog-to-social]
+verify_jwt = false
+
+[functions.scheduled-twitter-share]
+verify_jwt = false
+
+[functions.scheduled-linkedin-share]
+verify_jwt = false
+
+[functions.send-order-documents-email]
+verify_jwt = false
